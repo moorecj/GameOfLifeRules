@@ -16,7 +16,12 @@ namespace GameOfLifeRulesKata
 
             if (numberOfNeighbors < 2)
                 cellState = State.Dead;
-          
+
+            if( numberOfNeighbors > 3)
+                cellState = State.Dead;
+
+            if (numberOfNeighbors == 3)
+                cellState = State.Alive;
 
             return (cellState);
                
