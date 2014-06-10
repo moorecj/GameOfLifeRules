@@ -11,6 +11,11 @@ namespace GameOfLifeRulesKata
     
     public class GameOfLifeRules
     {
-        
+        static public State ApplyRules( int numberOfNeighbors, State cellState )
+        {
+
+            return (cellState);
+               
+        }
     }
 }

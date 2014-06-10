@@ -16,7 +16,7 @@ namespace GameOfLifeRulesTest
         public void ADeadCellWithNoNeighbors_ShouldResultInNoNeighbors()
         {
             int numberOfNeighbors = 0;
-            Assert.That( GameOfLifeRules.ApplyRules( numberOfNeighbors ), Is.EqualTo( State.Dead ));
+            Assert.That( GameOfLifeRules.ApplyRules( numberOfNeighbors, State.Dead ), Is.EqualTo( State.Dead ));
 
         }
 
