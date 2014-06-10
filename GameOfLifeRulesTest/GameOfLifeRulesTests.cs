@@ -42,6 +42,15 @@ namespace GameOfLifeRulesTest
 
         }
 
+        [Test]
+        public void AnAliveCellWithMoreThenThreeNeighbors_ShouldResultInADeadCell()
+        {
+            int numberOfNeighbors = 4;
+
+            Assert.That(GameOfLifeRules.ApplyRules(numberOfNeighbors, State.Alive), Is.EqualTo(State.Dead));
+
+        }
+
 
 
 
