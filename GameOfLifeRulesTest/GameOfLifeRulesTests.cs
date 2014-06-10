@@ -13,12 +13,22 @@ namespace GameOfLifeRulesTest
     public class GameOfLifeRulesTests
     {
         [Test]
-        public void ADeadCellWithNoNeighbors_ShouldResultInNoNeighbors()
+        public void ADeadCellWithNoNeighbors_ShouldResultInADeadCell()
         {
             int numberOfNeighbors = 0;
             Assert.That( GameOfLifeRules.ApplyRules( numberOfNeighbors, State.Dead ), Is.EqualTo( State.Dead ));
 
         }
+
+        [Test]
+        public void AnAliveCellWithNoNeighbors_ShouldResultInADeadCell()
+        {
+            int numberOfNeighbors = 0;
+            Assert.That(GameOfLifeRules.ApplyRules(numberOfNeighbors, State.Alive), Is.EqualTo(State.Dead));
+
+        }
+
+
 
     }
 }
