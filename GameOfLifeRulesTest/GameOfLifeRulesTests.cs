@@ -28,6 +28,22 @@ namespace GameOfLifeRulesTest
 
         }
 
+        [Test]
+        public void AnAliveCellWithTwoOrThreeNeighbors_ShouldResultInALiveCell()
+        {
+            int numberOfNeighbors = 2;
+
+            Assert.That(GameOfLifeRules.ApplyRules(numberOfNeighbors, State.Alive), Is.EqualTo(State.Alive));
+
+            numberOfNeighbors = 3;
+
+            Assert.That(GameOfLifeRules.ApplyRules(numberOfNeighbors, State.Alive), Is.EqualTo(State.Alive));
+
+
+        }
+
+
+
 
 
     }

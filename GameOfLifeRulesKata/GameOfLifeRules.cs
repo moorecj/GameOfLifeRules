@@ -14,8 +14,9 @@ namespace GameOfLifeRulesKata
         static public State ApplyRules( int numberOfNeighbors, State cellState )
         {
 
-            if (numberOfNeighbors < 3)
+            if (numberOfNeighbors < 2)
                 cellState = State.Dead;
+          
 
             return (cellState);
                
